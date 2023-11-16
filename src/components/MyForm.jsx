@@ -9,21 +9,15 @@ function MyForm() {
   };
 
   return (
-    <div>
-      {/* what makes the difference is the id attribute  */}
-      <form id="myForm" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </form>
-      {/* make the button form attribute correspond to the form id attribute  */}
-      <button type="submit" form="myForm">
-        Submit
-      </button>
-    </div>
+    // what makes the difference is the id attribute "myForm"
+    <form id="myForm" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+    </form>
   );
 }
 
